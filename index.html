@@ -1,0 +1,2022 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habib's Professional Portfolio</title>
+    <link rel="icon" type="image/png" href="Habib.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="design.css">
+    <style>
+        /* Education Section */
+.education-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.education-section .section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #1e293b;
+}
+
+/* Timeline Container - Smaller width */
+.education-timeline {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    border-left: 4px solid #2563eb;
+    padding-left: 40px;
+}
+
+/* Each timeline item */
+.education-item {
+    position: relative;
+    margin-bottom: 60px;
+    background: white;
+    border-radius: 12px;
+    padding: 25px 25px 25px 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+/* Bullet Dot */
+.education-item::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #2563eb;
+    border-radius: 50%;
+    position: absolute;
+    left: -48px;
+    top: 20px;
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px #2563eb;
+}
+
+/* Logo box */
+.edu-logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    background: white;
+    border: 2px solid #2563eb;
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.edu-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content styling */
+.edu-content {
+    text-align: left;
+}
+
+.edu-degree {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.edu-institution {
+    font-size: 1rem;
+    color: #475569;
+    margin: 5px 0;
+}
+
+.edu-year {
+    display: inline-block;
+    margin: 10px 0;
+    background: #2563eb;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.edu-desc {
+    margin-top: 10px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Hover effect */
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    border-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .education-timeline {
+        width: 90%;
+        padding-left: 25px;
+    }
+
+    .education-item::before {
+        left: -38px;
+    }
+}
+
+/* Dropdown styles for Navbar */
+.dropdownNav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownNav-link:hover .dropdownNav-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdownNav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 10px 0;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dropdownNav-menu .dropdownNav-item {
+    padding: 10px 20px;
+    display: block;
+    color: #475569;
+    font-weight: 500;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdownNav-menu .dropdownNav-item:hover {
+    background-color: #f1f5f9;
+    color: #2563eb;
+}
+
+.dropdownNav-toggle {
+    cursor: default !important; /* Prevent navigation on click */
+}
+#mobile-menu {transition: all 0.3s ease-in-out;}
+    </style>
+    <link rel="stylesheet" href="mobile-menu.css">
+    <style>@view-transition { navigation: auto; }</style>
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="flex items-center gap-3" onclick="showPage('home')">
+                <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-blue-600 to-cyan-400 text-white font-bold rounded-xl">AH</div>
+                <div>
+                    <h1 class="font-extrabold text-blue-600 text-lg">Ahsan Habib</h1>
+                    <p class="text-xs text-gray-500 -mt-1">Undergraduate Student • Web Developer</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <!--<li><a onclick="showPage('home')" class="nav-link">Home</a></li>-->
+                <li><a onclick="showPage('aboutSection')" class="nav-link">About</a></li>
+                <li><a onclick="showPage('skillSection')" class="nav-link">Skills</a></li>
+                <li><a onclick="showPage('projectSection')" class="nav-link">Projects</a></li>
+                <li><a onclick="showPage('paperSection')" class="nav-link">Paper</a></li>
+                <li class="dropdownNav-link">
+                    <a href="#" class="nav-link dropdownNav-toggle" onclick="return false;">Design <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdownNav-menu">
+                        <a onclick="showPage('photo-design')" class="nav-link dropdownNav-item">Poster design</a>
+                        <a onclick="showPage('web-design')" class="nav-link dropdownNav-item">Web design</a>
+                        <a onclick="showPage('app-design')" class="nav-link dropdownNav-item">App design</a>
+                        <a onclick="showPage('graphic-glut')" class="nav-link dropdownNav-item">Graphic (GLUT)</a>
+                        <a onclick="showPage('cad-design')" class="nav-link dropdownNav-item">CAD</a>
+                    </div>
+                </li>
+                <li><a onclick="showPage('experience')" class="nav-link">Experience</a></li>
+                <li><a onclick="showPage('achievements')" class="nav-link">Achievements</a></li>
+                <li><a onclick="showPage('resume')" class="nav-link">Resume</a></li>
+                <li><a onclick="showPage('contact')" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="mobile-menu-button md:hidden"> <i class="fas fa-bars text-lg"></i> </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden menu-backdrop border-t border-white/20 shadow-2xl">
+            <ul class="flex flex-col items-center py-6 space-y-3 px-6">
+                <li class="menu-item w-full" style="animation-delay: 0.1s"><a onclick="showTogglePage('aboutSection')" class="mobile-link"> <i class="fas fa-user mr-2"></i>About </a></li>
+                <li class="menu-item w-full" style="animation-delay: 0.2s"><a onclick="showTogglePage('skillSection')" class="mobile-link"> <i class="fas fa-code mr-2"></i>Skills </a></li>
+                <li class="menu-item w-full" style="animation-delay: 0.3s"><a onclick="showTogglePage('projectSection')" class="mobile-link"> <i class="fas fa-project-diagram mr-2"></i>Projects </a></li>
+                <li class="menu-item w-full" style="animation-delay: 0.4s"><a onclick="showTogglePage('paperSection')" class="mobile-link"> <i class="fas fa-file-alt mr-2"></i>Paper </a></li>
+                <li class="dropdown-link menu-item w-full" style="animation-delay: 0.5s"><a href="#" class="mobile-link dropdown-toggle" onclick="toggleDropdown(event)"> <i class="fas fa-palette mr-2"></i>Design <i class="fas fa-caret-down ml-auto"></i> </a>
+                    <div class="dropdown-menu" id="design-dropdown">
+                        <a onclick="showTogglePage('photo-design')" class="mobile-link dropdown-item"> <i class="fas fa-image mr-2"></i>Poster design </a> 
+                        <a onclick="showTogglePage('web-design')" class="mobile-link dropdown-item"> <i class="fas fa-globe mr-2"></i>Web design </a> 
+                        <a onclick="showTogglePage('app-design')" class="mobile-link dropdown-item"> <i class="fas fa-mobile-alt mr-2"></i>App design </a> 
+                        <a onclick="showTogglePage('graphic-glut')" class="mobile-link dropdown-item"> <i class="fas fa-paint-brush mr-2"></i>Graphic (GLUT) </a> 
+                        <a onclick="showTogglePage('cad-design')" class="mobile-link dropdown-item"> <i class="fas fa-cube mr-2"></i>CAD </a> 
+                    </div>
+                </li>
+                <li class="menu-item w-full" style="animation-delay: 0.6s"><a onclick="showTogglePage('experience')" class="mobile-link"> <i class="fas fa-briefcase mr-2"></i>Experience </a></li>
+                <li class="menu-item w-full" style="animation-delay: 0.7s"><a onclick="showTogglePage('achievements')" class="mobile-link"> <i class="fas fa-trophy mr-2"></i>Achievements </a></li>
+                <li class="menu-item w-full" style="animation-delay: 0.8s"><a onclick="showTogglePage('resume')" class="mobile-link"> <i class="fas fa-file-pdf mr-2"></i>Resume </a></li>
+                <li class="menu-item w-full" style="animation-delay: 0.9s"><a onclick="showTogglePage('contact')" class="mobile-link"> <i class="fas fa-envelope mr-2"></i>Contact </a></li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- HOME PAGE -->
+    <div id="home" class="page active"><!-- Hero Section -->
+        <section class="hero">
+            <div class="particles" id="particles"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge pulsing">Welcome to my portfolio</div>
+                    <h1 id="hero-name" class="gradient-text">S M Ahsan Habib</h1>
+                    <p class="subtitle typing-text" id="hero-title">Software Engineering Student</p>
+                    <p class="intro" id="hero-intro">I'm passionate about creating innovative solutions and building amazing digital experiences that make a difference in the world.</p>
+                    <div class="cta-buttons">
+                        <a onclick="showPage('projects')" class="btn btn-primary glowing"> 
+                            <i class="fas fa-rocket"></i> 
+                            View My Work 
+                        </a> 
+                        <a onclick="showPage('resume')" class="btn btn-secondary"> 
+                            <i class="fas fa-file-alt"></i> 
+                            Jump to Resume 
+                        </a> 
+                        <a onclick="showPage('contact')" class="btn btn-secondary"> 
+                            <i class="fas fa-envelope"></i> 
+                            Get In Touch 
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image floating">
+                    <div class="profile-container">
+                        <div class="profile-bg"></div>
+                        <div class="profile-image"><img src="aboutpic1.png" alt="Preview Photo"></div>
+                    </div>
+                </div>
+            </div><br><br>
+
+            <!-- Technologies & Tools (Inside Hero Section) -->
+            <h2 class="section-title">Technologies & Tools</h2>
+            <div class="overflow-hidden w-full relative select-none mt-10 px-10">
+                <div class="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-white to-transparent"></div>
+                <div class="marquee-inner flex will-change-transform min-w-[200%]">
+                    <div class="flex">
+                        <template id="tech-logo-template">
+                            <img class="w-14 h-14 object-contain mx-6" draggable="false" />
+                        </template>
+                        
+                        <script>
+                            const techLogos = [
+                                "html5",
+                                "css3",
+                                "javascript",
+                                "react",
+                                "nodejs",
+                                "express",
+                                "mysql",
+                                "mongodb",
+                                "python",
+                                "c",
+                                "git",
+                                "github"
+                            ];
+
+                            const techTrack = document.currentScript.parentElement;
+                            const techTemplate = document.getElementById("tech-logo-template");
+
+                            [...techLogos, ...techLogos].forEach((name) => {
+                                const img = techTemplate.content.cloneNode(true).querySelector("img");
+                                img.src = `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-original.svg`;
+                                img.alt = name.toUpperCase();
+                                techTrack.appendChild(img);
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white to-transparent"></div>
+            </div>
+        </section>
+        
+        <!-- About Me Preview -->
+        <section id="aboutSection" class="section fade-in">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-preview">
+                <div class="about-preview-image">
+                    <div class="about-image-placeholder"><img src="Habib.png" alt="Preview Photo"></div>
+                </div>
+                <div class="about-preview-content">
+                    <h3 id="about-preview-heading">Who I Am</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        I’m <span class="font-semibold text-orange-500">S M Ahsan Habib</span>, a Computer Science and Engineering student at
+                        <span class="font-semibold">AIUB</span> who loves designing and building software projects. 
+                        I enjoy thinking about ideas — from concept to design and implementation — especially in 
+                        <span class="font-semibold text-orange-500">web development</span> and <span class="font-semibold text-orange-500">UI/UX design</span>.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                        I believe in clean, user-centered designs and efficient, maintainable code. 
+                        I’m always exploring new technologies, improving my problem-solving skills, 
+                        and working on creative projects that push my boundaries.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Learning</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                    <div class="view-all-btn" style="margin-top: 30px; text-align: left;">
+                        <a onclick="showPage('about')" class="btn-outline"> 
+                            <i class="fas fa-arrow-right"></i> 
+                            Learn More About Me 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education-section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item"><!-- Single Education Item -->
+                    <div class="edu-logo">
+                        <img src="aiub_logo.gif" alt="AIUB">
+                    </div>
+
+                    <div class="edu-content">
+                        <h3 class="edu-degree">B.Sc. in Computer Science & Engineering</h3>
+                        <p class="edu-institution">American International University-Bangladesh (AIUB)</p>
+                        <span class="edu-year">2022 – present</span>
+                        <p class="edu-desc">Focused on software engineering, algorithms, machine learning, and full-stack development.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="edu-logo"><img src="spsc_logo.webp" alt="College"></div>
+                    <div class="edu-content">
+                        <h3 class="edu-degree">Higher Secondary Certificate (HSC)</h3>
+                        <p class="edu-institution">South Point School and College</p>
+                        <span class="edu-year">2019 – 2021</span>
+                        <p class="edu-desc">Completed science discipline with strong background in mathematics and ICT.</p>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="edu-logo"><img src="school_logo.webp" alt="School"></div>
+                    <div class="edu-content">
+                        <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+                        <p class="edu-institution">Satarkul School and College</p>
+                        <span class="edu-year">2017 – 2019</span>
+                        <p class="edu-desc">Achieved excellent academic performance with distinction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Preview -->
+        <section id="skillSection" class="section fade-in">
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-name">Frontend Development</h3>
+                    <p class="skill-description">HTML5, CSS3, JavaScript ES6+, React.js, Next.js</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="skill-name">Backend Development</h3>
+                    <p class="skill-description">Node.js, C#, Java, Nest.js, ASP.NET</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-window-restore"></i>
+                    </div>
+                    <h3 class="skill-name">Web Design</h3>
+                    <p class="skill-description">Figma, Canva, Mockitt</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="skill-name">AI &amp; ML</h3>
+                    <p class="skill-description">Python, Stacking Classifier, Data Analysis, Neural Networks</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">Database &amp; Cloud</h3>
+                    <p class="skill-description">MySQL, PostgreSQL, Git</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Preview -->
+        <section class="section fade-in" id="projectSection">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-carousel">
+                <div class="carousel-container" id="projectsCarousel"><!-- Projects will be dynamically loaded here --></div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn" onclick="previousProject()"> 
+                        <i class="fas fa-chevron-left"></i> 
+                    </button>
+                    <div class="carousel-indicators" id="carouselIndicators"><!-- Dots will be dynamically created --></div>
+                    <button class="carousel-btn" id="nextBtn" onclick="nextProject()"> 
+                        <i class="fas fa-chevron-right"></i> 
+                    </button>
+                </div>
+            </div>
+            <div class="view-all-btn">
+                <a onclick="showPage('projects')" class="btn-outline"> 
+                    <i class="fas fa-arrow-right"></i> 
+                    View All Projects 
+                </a>
+            </div>
+        </section>
+        
+        <!-- Research Section -->
+        <section class="section fade-in" id="paperSection">
+            <h2 class="section-title">📄 Research Papers</h2>
+            <p style="text-align: center; color: #64748b; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; line-height: 1.7;">Academic research contributions exploring innovative solutions in software engineering and computer science.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;"><!-- Paper 1 - Completed -->
+                <div class="skill-card" style="text-align: left; padding: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 15px;">
+                        <div class="skill-icon" style="margin: 0;">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <span style="background: #fef3c7; color: #92400e; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;"> 
+                                <i class="fas fa-clock"></i> 
+                                Completed 
+                            </span> 
+                            <span style="background: #dbeafe; color: #1e40af; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;"> 
+                                2025
+                            </span>
+                        </div>
+                    </div>
+                    <h3 class="skill-name" style="margin-bottom: 15px; font-size: 1.2rem;">Machine Learning Applications in Web Development</h3>
+                    <p class="skill-description" style="margin-bottom: 15px; line-height: 1.7;">The main objective of the research is to propose a model that can identify the risk of depression based on factors such as study hours, GPA, course load, and duration of sleep which are critical indicators of academic stress.</p>
+                    <div style="background: #fef3c7; border-left: 3px solid #f59e0b; padding: 12px; border-radius: 6px; margin-bottom: 15px;">
+                        <p style="color: #92400e; margin: 0; font-size: 0.85rem; font-weight: 600;">
+                            <i class="fas fa-info-circle"></i> 
+                            Not yet published - undergoing revisions
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Python
+                        </span> 
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Stacking Classifier
+                        </span> 
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            10 Fold Cross Validation
+                        </span> 
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Machine Learning algorithms
+                        </span>
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Pandas
+                        </span>
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Data Analysis
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Paper 2 - Thesis (In Progress) -->
+                <div class="skill-card" style="text-align: left; padding: 30px; border: 3px solid #2563eb; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; padding: 6px 15px; border-bottom-left-radius: 10px; font-weight: 700; font-size: 0.7rem;">
+                        <i class="fas fa-star"></i> 
+                        THESIS
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 15px; margin-top: 25px;">
+                        <div class="skill-icon" style="margin: 0; background: linear-gradient(135deg, #2563eb, #3b82f6);">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <span style="background: #dcfce7; color: #166534; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;"> 
+                                <i class="fas fa-spinner fa-pulse"></i> 
+                                In Progress 
+                            </span> 
+                            <span style="background: #dbeafe; color: #1e40af; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;"> 
+                                2025
+                            </span>
+                        </div>
+                    </div>
+                    <h3 class="skill-name" style="margin-bottom: 15px; font-size: 1.2rem;"Comparative Analysis of Functional and Non-functional requirements defects in practice</h3>
+                    <p class="skill-description" style="margin-bottom: 15px; line-height: 1.7;">This thesis investigates novel optimization techniques for distributed computing systems, focusing on improving decision making accuracy. The research proposes innovative approaches to enhance system efficiency and reliability while maintaining scalability across diverse network architectures.</p>
+                    <div style="background: linear-gradient(135deg, #dbeafe, #e0e7ff); border-left: 3px solid #2563eb; padding: 12px; border-radius: 6px; margin-bottom: 15px;">
+                        <p style="color: #1e40af; margin: 0; font-size: 0.85rem; font-weight: 600;">
+                            <i class="fas fa-rocket"></i> 
+                            Active research - Expected completion 2025
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Distributed Systems
+                        </span> 
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Framework Design
+                        </span> 
+                        <span class="tech-tag" style="font-size: 0.75rem;">
+                            Performance Analysis
+                        </span> 
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-btn">
+                <a onclick="showPage('papers')" class="btn-outline"> 
+                    <i class="fas fa-arrow-right"></i> 
+                    View Full Research Details 
+                </a>
+            </div>
+        </section>
+        
+        <!--Design Section-->
+        <section id="full-design-portfolio-overview" class="bg-white py-16 sm:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl text-center font-extrabold text-gray-800 mb-16">
+                    My <span class="text-indigo-600">Designs</span>
+                </h2>
+                
+                <div class="mb-24">
+                    <div class="lg:flex lg:space-x-12 items-center">
+                        <div class="lg:w-1/2 mb-8 lg:mb-0">
+                            <h3 class="text-3xl font-bold text-indigo-800 mb-4">Poster Design & Photo Editing</h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                A showcase of my projects in high-impact visual communication, blending photo retouching, conceptual design, and typography to create compelling posters and event banners.
+                            </p>
+                            <a onclick="showPage('photo-design')" class="inline-block px-8 py-3 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 rounded-lg shadow-md">
+                                View All Poster Projects
+                            </a>
+                        </div>
+
+                        <div class="lg:w-1/2">
+                            <div class="rounded-xl overflow-hidden shadow-2xl">
+                                <img src="poster/poster3.png" alt="Photo Retouching Poster Demo" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-24">
+                    <div class="lg:flex lg:flex-row-reverse items-center">
+                        <div class="lg:w-1/2 mb-8 lg:mb-0">
+                            <h3 class="text-3xl font-bold text-indigo-800 mb-4">Web Design (Figma)</h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                Responsive and user-centric web interface designs created using modern tools like Figma. Focusing on clean aesthetics, intuitive navigation, and effective information architecture.
+                            </p>
+                            <a onclick="showPage('web-design')" class="inline-block px-8 py-3  font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 rounded-lg shadow-md">
+                                View All Web Mockups
+                            </a>
+                        </div>
+
+                        <div class="lg:w-1/2 lg:mr-20">
+                            <div class="rounded-xl overflow-hidden shadow-2xl">
+                                <img src="web/web4.png" alt="Web Design Mockup" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="mb-24">
+                    <div class="lg:flex lg:space-x-12 items-center">
+                        <div class="lg:w-1/2 mb-8 lg:mb-0">
+                            <h3 class="text-3xl font-bold text-indigo-800 mb-4">Mobile App Design</h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                Showcasing clean and functional mobile application interfaces. Projects focus on user flow, native design patterns, and high-fidelity mockups created using app design tools.
+                            </p>
+                            <a onclick="showPage('app-design')" class="inline-block px-8 py-3 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 rounded-lg shadow-md">
+                                View All App Interfaces
+                            </a>
+                        </div>
+
+                        <div class="lg:w-1/2">
+                            <div class="rounded-xl overflow-hidden shadow-2xl w-2/4 mx-auto">
+                                <img src="app/Picture4.png" alt="Mobile App Screen Mockup" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-24">
+                    <div class="lg:flex lg:flex-row-reverse items-center">
+                        <div class="lg:w-1/2 mb-8 lg:mb-0">
+                            <h3 class="text-3xl font-bold text-indigo-800 mb-4">3D Graphic Design (OpenGL/GLUT)</h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                A specialized collection of visual projects demonstrating my proficiency in 3D modeling and rendering using the OpenGL/GLUT framework. Projects range from abstract shapes to complex scenes.
+                            </p>
+                            <a onclick="showPage('graphic-glut')" class="inline-block px-8 py-3 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 rounded-lg shadow-md">
+                                View All GLUT Models
+                            </a>
+                        </div>
+
+                        <div class="lg:w-1/2 lg:mr-20">
+                            <div class="rounded-xl overflow-hidden shadow-2xl">
+                                <img src="glut/glut1.png" alt="3D GLUT Model Demo" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <div class="lg:flex lg:space-x-12 items-center"> 
+                        <div class="lg:w-1/2 mb-8 lg:mb-0">
+                            <h3 class="text-3xl font-bold text-indigo-800 mb-4">CAD Design & Engineering Modeling</h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                A detailed portfolio of Computer-Aided Design (CAD) work, including both 2D drawings and complex 3D modeling for architectural and mechanical applications using tools like AutoCAD.
+                            </p>
+                            <a onclick="showPage('cad-design')" class="inline-block px-8 py-3 text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 rounded-lg shadow-md">
+                                View All CAD Projects
+                            </a>
+                        </div>
+
+                        <div class="lg:w-1/2">
+                            <div class="rounded-xl overflow-hidden shadow-2xl">
+                                <img src="autoCAD/cad1.png" alt="Mechanical CAD Part Demo" class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience & Interests Section -->
+        <section id="experienceSection" class="section fade-in">
+            <h2 class="section-title">💼 Experience &amp; Interests</h2>
+            <p style="text-align: center; color: #64748b; max-width: 800px; margin: 0 auto 60px; font-size: 1.1rem; line-height: 1.7;">My journey in software development, showcasing continuous learning, hands-on projects, and passion for technology innovation.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - Present</div>
+                        <h3 class="timeline-title">Independent Learner – Software &amp; Web Development</h3>
+                        <p class="timeline-company">Self-Driven Learning</p>
+                        <p class="timeline-description">• Designed and developed multiple academic and personal projects (8–10), including web apps, utility tools, and interactive interfaces.<br>
+                          • Skilled in HTML, CSS, JavaScript, and problem-solving using C and Python.<br>
+                          • Continuously exploring new technologies such as React, Node.js, and database systems.<br>
+                          • Focused on creating efficient, user-friendly, and visually appealing digital solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Ongoing</div>
+                        <h3 class="timeline-title">Collaborative Project Developer – University Projects</h3>
+                        <p class="timeline-company">Team-Based Development</p>
+                        <p class="timeline-description">• Worked in small teams to design, test, and deploy software prototypes for class assignments and research ideas.<br>
+                          • Gained strong experience in debugging, version control, and teamwork.<br>
+                          • Learned to manage time, divide tasks, and deliver projects under tight deadlines.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Continuous</div>
+                        <h3 class="timeline-title">Technology Enthusiast – Self-Driven Exploration</h3>
+                        <p class="timeline-company">Innovation &amp; Research</p>
+                        <p class="timeline-description">• Passionate about understanding how technology can solve real-world problems.<br>
+                          • Experiment with new frameworks, open-source tools, and automation techniques.<br>
+                          • Interested in combining creativity with logic to build innovative systems and improve user experiences.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 80px;">
+                <h2 class="section-title">💡 Key Interests</h2>
+                <div class="skills-grid">
+                    <div class="skill-card card-3d interactive-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skill-name">Web &amp; App Development</h3>
+                        <p class="skill-description">Building responsive, interactive web applications and exploring modern frameworks</p>
+                    </div>
+                    <div class="skill-card card-3d interactive-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="skill-name">Artificial Intelligence &amp; Automation</h3>
+                        <p class="skill-description">Exploring AI technologies and creating automated solutions for efficiency</p>
+                    </div>
+                    <div class="skill-card card-3d interactive-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="skill-name">UI/UX Design &amp; Front-End</h3>
+                        <p class="skill-description">Crafting beautiful, user-friendly interfaces with modern design principles</p>
+                    </div>
+                    <div class="skill-card card-3d interactive-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="skill-name">Software Optimization &amp; Debugging</h3>
+                        <p class="skill-description">Improving code performance and solving complex technical challenges</p>
+                    </div>
+                    <div class="skill-card card-3d interactive-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="skill-name">Technology Research &amp; Innovation</h3>
+                        <p class="skill-description">Staying current with emerging technologies and innovative solutions</p>
+                    </div>
+                    <div class="skill-card card-3d interactive-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="skill-name">Team Collaboration &amp; Project Building</h3>
+                        <p class="skill-description">Working effectively in teams to deliver successful projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="page-header">
+            <h1>About Me</h1>
+            <p>Get to know me better - my journey, values, interests, and what drives my passion for technology and innovation.</p>
+        </div>
+        <section class="section"><!-- Hero Section -->
+            <div class="about-hero">
+                <div class="about-image-container">
+                    <div class="about-main-image"><img src="aboutpic2.png" alt="Professional Photo"></div>
+                    <div class="image-upload-hint"><i class="fas fa-info-circle"></i> <span id="image-upload-text">Space reserved for your professional photo</span></div>
+                </div>
+                <div class="about-content-main">
+                    <h1 id="about-main-heading">Hello, I'm S M Ahsan Habib</h1>
+                    <p class="subtitle" id="about-main-subtitle">Software Engineering Student &amp; Aspiring Developer</p>
+                    <p id="about-intro-para1">I'm a passionate software engineering student with a deep love for creating innovative solutions that make a real impact. My journey in technology started with curiosity about how things work and has evolved into a commitment to building exceptional digital experiences that solve real-world problems.</p>
+                    <p id="about-intro-para2">With hands-on experience in full-stack development, mobile applications, and emerging technologies like AI/ML, I'm constantly pushing myself to learn, grow, and contribute to meaningful projects. I believe in the power of technology to transform lives and create positive change in our world.</p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <span class="highlight-text" id="highlight-education">Software Engineering Student</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span class="highlight-text" id="highlight-location">Based in Dhaka, CA</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="highlight-text" id="highlight-experience">3+ Years of Learning &amp; Building</span>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <span class="highlight-text" id="highlight-projects">10+ Projects Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- My Story Section -->
+            <div class="about-section-block">
+                <h2><i class="fas fa-book-open"></i> <span id="story-heading">My Story</span></h2>
+                    <p id="story-para1">My fascination with technology began in high school when I built my first website. What started as a simple HTML page quickly turned into an obsession with understanding how software works and how it can be used to solve problems. This curiosity led me to pursue Software Engineering at university, where I've been able to dive deep into computer science fundamentals while working on real-world projects.</p>
+                    <p id="story-para2">Throughout my academic journey, I've had the opportunity to work on diverse projects ranging from e-commerce platforms to AI-powered applications. Each project has taught me valuable lessons about software architecture, user experience, and the importance of writing clean, maintainable code. I've also learned the value of collaboration, having worked with talented teams on university projects and open-source contributions.</p>
+                    <p id="story-para3">Beyond academics, I'm an active member of the tech community. I participate in hackathons, contribute to open-source projects, and mentor aspiring developers. I believe in giving back to the community that has taught me so much and helping others discover their passion for technology.</p>
+            </div>
+            <!-- Core Values Section -->
+            <div class="about-section-block">
+                <h2><i class="fas fa-heart"></i> <span id="values-heading">Core Values &amp; Philosophy</span></h2>
+                <p id="values-intro">These principles guide my work and shape how I approach every project and collaboration:</p>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 id="value1-title">Innovation</h3>
+                        <p id="value1-desc">Always seeking creative solutions and pushing boundaries to build something unique and impactful.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 id="value2-title">Collaboration</h3>
+                        <p id="value2-desc">Believing in the power of teamwork and diverse perspectives to create better solutions.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 id="value3-title">Continuous Growth</h3>
+                        <p id="value3-desc">Committed to lifelong learning and staying current with evolving technologies and best practices.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 id="value4-title">Quality</h3>
+                        <p id="value4-desc">Dedicated to writing clean, efficient code and delivering polished, user-friendly experiences.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 id="value5-title">Impact</h3>
+                        <p id="value5-desc">Focused on creating technology that solves real problems and makes a positive difference.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3 id="value6-title">Integrity</h3>
+                        <p id="value6-desc">Maintaining ethical standards and transparency in all aspects of development and collaboration.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Interests & Hobbies Section -->
+            <div class="about-section-block">
+                <h2><i class="fas fa-palette"></i> <span id="interests-heading">Interests &amp; Hobbies</span></h2>
+                <p id="interests-intro">When I'm not coding, you'll find me exploring these passions that keep me inspired and balanced:</p>
+                <div class="interests-grid">
+                    <div class="interest-item"><i class="fas fa-book"></i> <span id="interest1">Reading Tech Blogs</span></div>
+                    <div class="interest-item"><i class="fas fa-pen"></i> <span id="interest2">Writing Poem</span></div>
+                    <div class="interest-item"><i class="fas fa-chess"></i> <span id="interest3">Chess</span></div>
+                    <div class="interest-item"><i class="fas fa-book"></i> <span id="interest4">collecting books</span></div>
+                    <div class="interest-item"><i class="fas fa-tv"></i> <span id="interest5">watching movies</span></div>
+                    <div class="interest-item"><i class="fas fa-th"></i> <span id="interest6">Solving Sudoku</span></div>
+                    <!--<div class="interest-item"><i class="fas fa-podcast"></i> <span id="interest6">Tech Podcasts</span></div>
+                    <div class="interest-item"><i class="fas fa-dumbbell"></i> <span id="interest7">Fitness</span></div>
+                    <div class="interest-item"><i class="fas fa-plane"></i> <span id="interest8">Travel</span></div>-->
+                </div>
+            </div>
+            <!-- My Journey Section -->
+            <div class="about-section-block">
+                <h2><i class="fas fa-route"></i> <span id="journey-heading">My Journey</span></h2>
+                <p id="journey-intro">Key milestones that have shaped my path in technology:</p>
+                <div class="journey-timeline">
+                    <div class="journey-item">
+                        <h4 id="journey1-title">First Line of Code (2020)</h4>
+                        <p id="journey1-desc">Wrote my first "Hello World" program and fell in love with the logic and creativity of programming. Started learning HTML, C</p>
+                    </div>
+                    <div class="journey-item">
+                        <h4 id="journey2-title">University Admission (2022)</h4>
+                        <p id="journey2-desc">Accepted into the Computer Science and Engineering program at American International University-Bangladesh(AIUB). Began formal education in computer science fundamentals, data structures, and algorithms</p>
+                    </div>
+                    <div class="journey-item">
+                        <h4 id="journey3-title">First Project (2023)</h4>
+                        <p id="journey3-desc">Built my first application - todo list. This project taught me about system design, database management, and the importance of user experience.</p>
+                    </div>
+                    <div class="journey-item">
+                        <h4 id="journey4-title">Open Source Contributions (2023-Present)</h4>
+                        <p id="journey4-desc">Became an active contributor to open-source projects, collaborating with developers worldwide. Gained valuable experience in code review, documentation, and community engagement.</p>
+                    </div>
+                    <div class="journey-item">
+                        <h4 id="journey5-title">Looking Ahead (2024-2025)</h4>
+                        <p id="journey5-desc">Focused on completing my degree while seeking internship opportunities and building more complex projects. Excited to transition from student to professional developer and make meaningful contributions to the tech industry.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Call to Action -->
+            <div class="about-section-block" style="background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; text-align: center;">
+                <h2 style="color: white; justify-content: center;"><i class="fas fa-handshake"></i> <span id="cta-heading">Let's Work Together</span></h2>
+                <p style="color: white; opacity: 0.95; font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px;" id="cta-text">I'm always excited to connect with fellow developers, potential collaborators, and anyone interested in technology. Whether you have a project idea, want to discuss tech, or just want to say hello - I'd love to hear from you!</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a onclick="showPage('contact')" class="btn btn-white"> 
+                        <i class="fas fa-envelope"></i> 
+                        Get In Touch 
+                    </a> 
+                    <a onclick="showPage('projects')" class="btn" style="background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white;"> 
+                        <i class="fas fa-folder-open"></i> 
+                        View My Projects 
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- SKILLS PAGE -->
+    <!--<div id="skills" class="page">
+        <div class="page-header">
+            <h1>Skills &amp; Expertise</h1>
+            <p>Comprehensive overview of my technical skills and proficiency levels across various technologies and frameworks.</p>
+        </div>
+        <section class="section">
+            <div class="skills-grid">
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="skill-name">Frontend Development</h3>
+                    <p class="skill-description">HTML5, CSS3, JavaScript ES6+, TypeScript, React.js, Vue.js, Angular, Sass/SCSS, Tailwind CSS, Bootstrap</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="skill-name">Backend Development</h3>
+                    <p class="skill-description">Node.js, Python, Java, C#, Express.js, Django, Flask, Spring Boot, REST APIs, GraphQL</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="skill-name">Database &amp; Cloud</h3>
+                    <p class="skill-description">MySQL, PostgreSQL, MongoDB, Redis, Firebase, AWS, Azure, Docker, Kubernetes, Git</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="skill-name">Mobile &amp; Tools</h3>
+                    <p class="skill-description">React Native, Flutter, Swift, Kotlin, Figma, Adobe XD, Jest, Cypress, Webpack, Vite</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="skill-name">AI &amp; Machine Learning</h3>
+                    <p class="skill-description">Python, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Data Analysis, Neural Networks</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="skill-name">DevOps &amp; Security</h3>
+                    <p class="skill-description">CI/CD, Jenkins, GitHub Actions, OAuth, JWT, SSL/TLS, Penetration Testing, Linux</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="skill-name">Game Development</h3>
+                    <p class="skill-description">Unity, C#, Unreal Engine, Blender, 3D Modeling, Game Physics, Multiplayer Systems</p>
+                </div>
+                <div class="skill-card card-3d interactive-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="skill-name">Data Science</h3>
+                    <p class="skill-description">R, MATLAB, Tableau, Power BI, Statistical Analysis, Data Visualization, Big Data, Hadoop</p>
+                </div>
+            </div>
+        </section>
+    </div>-->
+    
+    <!-- PROJECTS PAGE -->
+    <div id="projects" class="page">
+        <div class="page-header">
+            <h1>All Projects</h1>
+            <p>Explore my complete portfolio of projects showcasing various technologies and innovative solutions.</p>
+        </div>
+        <section class="section">
+            <div class="projects-grid" id="allProjectsGrid"><!-- Projects will be dynamically loaded here --></div>
+        </section>
+    </div>
+    
+    <!-- Research Paper Page-->
+    <div id="papers" class="page">
+        <div class="page-header">
+           <h1>📄 Research Papers</h1>
+            <p>In-depth academic research contributions exploring innovative solutions in software engineering and computer science. Academic research contributions exploring innovative solutions in software engineering and computer science.</p>
+        </div>
+        <section class="section" id="researchPapersSection">
+            <!-- Research Papers Section -->
+            <div style="margin-top: 80px;">
+                <div class="about-section-block" style="margin-bottom: 40px;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 20px;">
+                        <div>
+                            <h2 style="margin-bottom: 10px;"><i class="fas fa-file-alt" style="color: #2563eb;"></i> <span id="paper1-title">Analyzing the Impact of Academic Pressure on Student Mental Health and Depression Using Machine Learning</span></h2>
+                            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+                                <span style="background: #fef3c7; color: #92400e; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;"> 
+                                    <i class="fas fa-clock"></i> 
+                                    Completed    
+                                </span> 
+                                <span style="background: #dbeafe; color: #1e40af; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;"> 
+                                    <i class="fas fa-calendar"></i> 
+                                    <span id="paper1-year">
+                                        2025
+                                    </span> 
+                                </span> 
+                                <span style="background: #f3e8ff; color: #6b21a8; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;"> 
+                                    <i class="fas fa-tag"></i> 
+                                    <span id="paper1-category">
+                                        Machine Learning
+                                    </span> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: #64748b; line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem;" id="paper1-abstract">The main objective of the research is to propose a model that can identify the risk of depression based on factors such as study hours, GPA, course load, and duration of sleep which are critical indicators of academic stress. </p>
+                    <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                            <i class="fas fa-info-circle" style="color: #f59e0b; font-size: 1.3rem;"></i>
+                            <h4 style="color: #92400e; font-weight: 700; margin: 0;">Status: Not Published</h4>
+                        </div>
+                        <p style="color: #92400e; margin: 0; line-height: 1.6;" id="paper1-status-note">This paper has been completed but requires further refinement before submission to academic journals. Currently undergoing revisions to meet publication standards and incorporate additional research findings.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #1e293b; font-weight: 700; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-lightbulb" style="color: #2563eb;"></i> Key Contributions</h4>
+                            <ul class="resume-list" id="paper1-contributions">
+                                <li>Developed a novel framework for integrating ML models </li>
+                                <li>Conducted comparative analysis of 3+ machine learning algorithms </li>
+                                <li>Proposed optimization techniques that reduced depression rate</li>
+                                <li>Validated model accuracy using cross-validation and real-world data</li>
+                            </ul>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <span class="tech-tag">Python</span> 
+                        <span class="tech-tag">Stacking Classifier</span>
+                        <span class="tech-tag">10 Fold Cross Validation</span>
+                        <span class="tech-tag">Machine Learning algorithms</span>
+                        <span class="tech-tag">Pandas</span> 
+                        <span class="tech-tag">Data Analysis</span>
+                    </div>
+                </div>
+                <div class="about-section-block" style="border: 3px solid #2563eb; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: 0; right: 0; background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; padding: 8px 20px; border-bottom-left-radius: 12px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);">
+                        <i class="fas fa-star"></i> 
+                        THESIS PROJECT
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 20px; margin-top: 30px;">
+                        <div>
+                            <h2 style="margin-bottom: 10px;"><i class="fas fa-graduation-cap" style="color: #2563eb;"></i> <span id="paper2-title">Comparative Analysis of Functional and Non-functional requirements defects in practice</span></h2>
+                            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+                                <span style="background: #dcfce7; color: #166534; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;"> 
+                                    <i class="fas fa-spinner fa-pulse"></i> 
+                                    In Progress 
+                                </span> 
+                                <span style="background: #dbeafe; color: #1e40af; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;"> 
+                                    <i class="fas fa-calendar"></i> 
+                                    <span id="paper2-year">2025</span> 
+                                </span> 
+                                <span style="background: #f3e8ff; color: #6b21a8; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;"> 
+                                    <i class="fas fa-tag"></i> 
+                                    <span id="paper2-category">Distributed Systems</span> 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="color: #64748b; line-height: 1.8; margin-bottom: 20px; font-size: 1.05rem;" id="paper2-abstract">This thesis investigates novel optimization techniques for distributed computing systems, focusing on improving decision making accuracy. The research proposes innovative approaches to enhance system efficiency and reliability while maintaining scalability across diverse network architectures.</p>
+                    <div style="background: linear-gradient(135deg, #dbeafe, #e0e7ff); border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                            <i class="fas fa-rocket" style="color: #2563eb; font-size: 1.3rem;"></i>
+                            <h4 style="color: #1e40af; font-weight: 700; margin: 0;">Current Status: Active Research</h4>
+                        </div>
+                        <p style="color: #1e40af; margin: 0; line-height: 1.6;" id="paper2-status-note">This is my ongoing thesis project for my Bachelor's degree in Computer Science and Engineering [major: Software Engineering]. Currently in the implementation and testing phase, with plans to submit to top-tier conferences upon completion. Expected completion and defense scheduled for 2026.</p>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #1e293b; font-weight: 700; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-tasks" style="color: #2563eb;"></i> Research Objectives</h4>
+                        <ul class="resume-list" id="paper2-objectives">
+                            <li>Design and implement novel framework</li>
+                            <li>Improve decision making</li>
+                            <li>Evaluate performance across metrics</li>
+                            <li>Publish findings in peer-reviewed conferences and academic journals</li>
+                        </ul>
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <h4 style="color: #1e293b; font-weight: 700; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-chart-line" style="color: #2563eb;"></i> Progress Timeline</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 3px solid #22c55e;">
+                                <div style="font-weight: 700; color: #1e293b; margin-bottom: 5px;">
+                                    ✓ Literature Review
+                                </div>
+                                <div style="font-size: 0.85rem; color: #64748b;">Completed</div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 3px solid #22c55e;">
+                                <div style="font-weight: 700; color: #1e293b; margin-bottom: 5px;">
+                                    ✓ Algorithm Design
+                                </div>
+                                <div style="font-size: 0.85rem; color: #64748b;">Completed</div>
+                            </div>
+                            <div style="background: #dbeafe; padding: 15px; border-radius: 8px; border-left: 3px solid #2563eb;">
+                                <div style="font-weight: 700; color: #1e293b; margin-bottom: 5px;">
+                                    ⟳ Implementation
+                                </div>
+                                <div style="font-size: 0.85rem; color: #2563eb;">
+                                    In Progress - 70%
+                                </div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 3px solid #94a3b8;">
+                                <div style="font-weight: 700; color: #1e293b; margin-bottom: 5px;">
+                                    ○ Testing &amp; Analysis
+                                </div>
+                                <div style="font-size: 0.85rem; color: #64748b;">Upcoming</div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 3px solid #94a3b8;">
+                                <div style="font-weight: 700; color: #1e293b; margin-bottom: 5px;">
+                                    ○ Paper Writing
+                                </div>
+                                <div style="font-size: 0.85rem; color: #64748b;">Upcoming</div>
+                            </div>
+                            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; border-left: 3px solid #94a3b8;">
+                                <div style="font-weight: 700; color: #1e293b; margin-bottom: 5px;">
+                                    ○ Defense
+                                </div>
+                                <div style="font-size: 0.85rem; color: #64748b;">2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <span class="tech-tag">Distributed Systems</span> 
+                        <span class="tech-tag">Framework Design</span> 
+                        <span class="tech-tag">Performance Analysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ACHIEVEMENTS PAGE -->
+    <div id="achievements" class="page">
+    <div class="page-header">
+        <h1>Achievements &amp; Certifications</h1>
+        <p>Recognition, awards, and professional certifications that demonstrate my commitment to excellence and continuous learning.</p>
+    </div>
+    <section class="section">
+        <div class="achievements-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/certificate1.jpg" alt="Quiz Competition" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Quiz Competition 4th position</h3>
+                <div style="margin-top: 15px;">
+                    <!--<span class="tech-tag" style="background-color: #dbeafe; color: #1e40af;">Awarded</span>-->
+                    <span class="tech-tag" style="background-color: #fffbeb; color: #b45309;">Certification</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/certificate2.jpg" alt="Participation Certificate" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Participation Certificate</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #fffbeb; color: #b45309;">Certification</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/crest1.jpg" alt="Model Tast Rank" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">HSC Model test prize</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #dcfce7; color: #15803d;">Academic</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/crest2.jpg" alt="Online Event" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Online event Advisor</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f0f9ff; color: #0284c7;">Community</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book1.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Poem Writing</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book2.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Best Student Award</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book3.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Debate Competition</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book4.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Online Event Advisor</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book 5.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Science Fest</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book 6.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Poem Recitation</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book7.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Speech</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+
+            <div class="skill-card card-3d interactive-card" style="padding: 20px; text-align: center;">
+                <div style="height: 270px; width: 332px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; background-color: #f7f9fb;">
+                    <img src="achievement/book 8.jpg" alt="prize" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 class="skill-name" style="font-size: 1.15rem; margin-bottom: 5px;">Composition Writing</h3>
+                <div style="margin-top: 15px;">
+                    <span class="tech-tag" style="background-color: #f3e8ff; color: #7e22ce;">Prize</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <div id="photo-design" class="page">
+        <div class="page-header">
+            <h1>Poster Design Portfolio</h1>
+            <p>Showcasing my work in photo editing and design/p>
+        </div>
+        <section class="section">
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="poster/poster3.png" alt="Photo Retouching Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="poster/poster2.png" alt="Conceptual Design Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="poster/poster4.png" alt="Event Banner Mockup" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="poster/poster1.png" alt="Event Banner Mockup" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="web-design" class="page">
+        <div class="page-header">
+            <h1>Web Design</h1>
+            <p>Visual projects created using Web design tools : Figma</p>
+        </div>
+        <section class="section">
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="web/web1.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="web/web2.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="web/web3.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="web/web4.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="app-design" class="page">
+        <div class="page-header">
+            <h1>App Design</h1>
+            <p>Visual projects created using app design tools </p>
+        </div>
+        <section class="section">
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture1.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture2.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture3.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture4.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture5.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture6.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture7.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture8.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture9.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture10.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture11.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture12.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture13.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture14.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture15.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture16.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture17.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture18.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture19.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture20.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture21.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture22.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture23.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture24.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture25.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture26.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture27.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture28.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture29.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="app/Picture30.png" alt="3D Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div id="graphic-glut" class="page">
+        <div class="page-header">
+            <h1>Graphic Design (GLUT) Projects</h1>
+            <p>Visual projects created using OpenGL/GLUT framework</p>
+        </div>
+        <section class="section">
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="glut/glut1.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="glut/glut2.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="glut/glut3.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="glut/glut4.png" alt="3D GLUT Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div id="cad-design" class="page">
+        <div class="page-header">
+            <h1>CAD Design & Modeling</h1>
+            <p>A collection of my Computer-Aided Design (CAD) work</p>
+        </div>
+        <section class="section">
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad1.png" alt="Mechanical CAD Part Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad2.png" alt="Architectural CAD Model Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad3.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad4.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad5.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad6.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad11.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad8.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad9.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad10.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad7.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+
+                <div class="skill-card card-3d interactive-card" style="padding: 10px; text-align: center;">
+                    <img src="autoCAD/cad12.png" alt="Complex CAD Assembly Demo" style="width: 100%; height: auto; border-radius: 6px; margin-bottom: 10px; object-fit: cover;">
+                </div>
+            </div>
+        </section>
+    </div>
+  
+    <!-- RESUME PAGE -->
+    <div id="resume" class="page">
+        <div class="page-header">
+            <h1>Resume</h1>
+            <p>View and download my comprehensive resume showcasing my skills, experience, and achievements in a professionally designed document.</p>
+            <div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <!--<button onclick="downloadResume()" class="btn btn-primary" style="background: white; color: #2563eb; border: 2px solid white;"> <i class="fas fa-download"></i> Download Resume </button>--> 
+                <button onclick="scrollToDownloadSection()" class="btn btn-secondary" style="background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white;"> 
+                    <i class="fas fa-arrow-down"></i> 
+                    Jump to Download 
+                </button>
+            </div>
+        </div>
+        <section class="section">
+            <!-- Visual Resume Display -->
+            <div class="resume-container">
+                <div class="resume-document">
+                    <!-- Resume Header -->
+                    <div class="resume-header-section">
+                        <h1 class="resume-name">Ahsan Habib</h1>
+                        <p class="resume-title-role">Software Engineering Student</p>
+                        <div class="resume-contact-info">
+                            <span>
+                                <i class="fas fa-envelope"></i> 
+                                ahsan.Habib@email.com
+                            </span> 
+                            <span>
+                                <i class="fas fa-phone"></i> 
+                                +880 1317 426848
+                            </span> 
+                            <span>
+                                <i class="fas fa-map-marker-alt"></i> 
+                                Dhaka
+                            </span> 
+                            <span>
+                                <i class="fab fa-linkedin"></i> 
+                                linkedin.com/in/ahsanHabib
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Professional Summary -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+                        <p class="resume-text">Motivated CSE student with practical experience in building interactive web applications, product catalog systems, and modular UI components. Strong foundation in software development, requirement analysis, and problem-solving with a growing focus on modern web technologies and system design. Passionate about developing efficient, user-centric solutions through clean code and structured workflows. </p>
+                    </div>
+                    <!-- Education -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">Bachelor of Science in Computer Science and Engineering</h3>
+                                    <p class="resume-item-subtitle">American International University-Bangladesh</p>
+                                    <p class="resume-item-subtitle">Major in Software Engineering | CGPA: 3.81/4.00</p>
+                                </div>
+                                <span class="resume-date">2022 - present</span>
+                            </div>
+                        </div>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">Higher Secondary Certificate </h3>
+                                    <p class="resume-item-subtitle">South Point School and College</p>
+                                    <p class="resume-item-subtitle">Science | GPA: 5.00/5.00 </p>
+                                </div>
+                                <span class="resume-date">2019 - 2021</span>
+                            </div>
+                        </div>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">Secondary School Certificate </h3>
+                                    <p class="resume-item-subtitle">Satarkul School and College </p>
+                                    <p class="resume-item-subtitle">Science | GPA: 4.83/5.00 </p>
+                                </div>
+                                <span class="resume-date">2017 - 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">Independent Learner – Software and Web Development </h3>
+                                </div>
+                                <span class="resume-date">2023 - Present</span>
+                            </div>
+                            <ul class="resume-list">
+                                <li>Built 8–10 academic and personal projects, including web apps, tools, and interactive interfaces.</li>
+                                <li>Skilled in HTML, CSS, JS, and basic problem-solving using C++. </li>
+                                <li>Learning modern tools such as React, Node.js, and database systems.</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">Collaborative Project Developer – University Projects </h3>
+                                </div>
+                                <span class="resume-date">Ongoing</span>
+                            </div>
+                            <ul class="resume-list">
+                                <li>Worked in teams to design and develop software prototypes for academic assignments. </li>
+                                <li>Improved task distribution, communication, and deadline management in group-based environments.  </li>
+                                <li>Gained experience managing deadlines and dividing tasks efficiently. </li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">Self-Driven Research & Development </h3>
+                                </div>
+                                <span class="resume-date">Continuous</span>
+                            </div>
+                            <ul class="resume-list">
+                                <li>Experiment with open-source technologies, UI/UX patterns, and automation concepts.  </li>
+                                <li>Explore various frameworks and tools to understand real-world development practices.  </li>
+                                <li>Interested in developing practical solutions that focus on usability and accessible system design. </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical Skills -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+                        <div class="resume-skills-grid">
+                            <div class="resume-skill-category">
+                                <h4>Programming</h4>
+                                <p> C, C++, Java, C#, PHP, ES6  </p>
+                            </div>
+                            <div class="resume-skill-category">
+                                <h4>Frontend</h4>
+                                <p> HTML, CSS, JavaScript, Tailwind CSS, React (basic) </p>
+                            </div>
+                            <div class="resume-skill-category">
+                                <h4>Backend</h4>
+                                <p>ASP.NET, Web API, Node.js (basic), Next.js (basic)</p>
+                            </div>
+                            <div class="resume-skill-category">
+                                <h4>Database</h4>
+                                <p> MySQL, Oracle, PostgreSQL</p>
+                            </div>
+                            <div class="resume-skill-category">
+                                <h4>Tools &amp; Cloud</h4>
+                                <p>Git, GitHub, VS Code, Figma, Canva, AutoCAD</p>
+                            </div>
+                            <div class="resume-skill-category">
+                                <h4>Concepts</h4>
+                                <p> Requirement Analysis, UI/UX Principles, Responsive Design, Debugging </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projects -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-project-diagram"></i> Key Projects</h2>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">Pet Shop Management System: </h3>
+                                    <p class="resume-item-subtitle">Technologies: PHP, JavaScript, HTML, CSS</p>
+                                </div>
+                                <span class="resume-date">May 2024 – Aug 2024 </span>
+                            </div>
+                            <ul class="resume-list">
+                                <li>Developed a dynamic product catalog with category, type, and price-based filtering.</li>
+                                <li>Implemented a functional cart with quantity control and auto-price updates. </li>
+                                <li>Designed responsive UI sections, including package displays, signup forms, and custom filtering tools. </li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title"> Car Rental Management System</h3>
+                                    <p class="resume-item-subtitle">Technologies: Next.js, Nest.js, Tailwind CSS, JWT Auth </p>
+                                </div>
+                                <span class="resume-date">May 2025 – Jun 2025 </span>
+                            </div>
+                            <ul class="resume-list">
+                                <li>Built modules for vehicle inventory, booking calendar, customer profiles, and maintenance tracking.</li>
+                                <li>Implemented structured navigation and component-based UI design for scalability. </li>
+                                <li>Designed clean page layouts optimized for future API integration and dynamic data handling.</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">  Portfolio Website</h3>
+                                    <p class="resume-item-subtitle">Technologies: HTML, CSS, JS, Tailwind CSS </p>
+                                </div>
+                                <span class="resume-date">November 2025 </span>
+                            </div>
+                            <ul class="resume-list">
+                                <li>Developed a responsive portfolio showcasing skills, achievements, and projects.</li>
+                                <li>Added smooth scrolling effects, modern layouts, and structured section-based design.  </li>
+                                <li>Optimized code for consistency, clarity, and responsiveness across devices.</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item">
+                            <div class="resume-item-header">
+                                <div>
+                                    <h3 class="resume-item-title">  E-commerce website (Load-in-Tech)</h3>
+                                    <p class="resume-item-subtitle">Technologies: HTML, CSS, JS, Tailwind CSS </p>
+                                </div>
+                                <span class="resume-date">Oct 2025 – Nov 2025</span>
+                            </div>
+                            <ul class="resume-list">
+                                <li>Built a modern, responsive e-commerce interface featuring product categories, dynamic filtering, flash sales, and comparison tools. </li>
+                                <li>Added interactive UX elements: sticky header, chatbot widget, notification system, floating icons, and hero animations. </li>
+                                <li>Developed custom scripts for filtering, bot responses, countdown timers, and UI interactions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-trophy"></i> RESEARCH INTERESTS </h2>
+                        <ul class="resume-list">
+                            <li>Software Development Models</li>
+                            <li>Requirement Analysis </li>
+                            <li>Cost Estimation & Risk Management </li>
+                            <li>Machine Learning Applications in Education</li>
+                        </ul>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-trophy"></i> Achievements &amp; Certifications</h2>
+                        <ul class="resume-list">
+                            <li>CISCO Certified: IT Essentials</li>
+                            <li>Secured 4th Position in Quiz Competition (College Level)</li>
+                            <li>Participated in Programming Contest, CS Fest – AIUB </li>
+                        </ul>
+                    </div>
+
+                    <div class="resume-section">
+                        <h2 class="resume-section-title"><i class="fas fa-trophy"></i> ADDITIONAL INFORMATION</h2>
+                        <ul class="resume-list">
+                            <li><strong>IT Skills:</strong>  MS Word, Excel, PowerPoint</li>
+                            <li><strong>Languages:</strong> Bangla (Native), English (Intermediate)</li>
+                            <li><strong>Interests:</strong> Technology, Problem-Solving, UI/UX Exploration, Learning New Tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Download Section -->
+            <div id="downloadSection" class="resume-showcase" style="margin-top: 60px;">
+                <div class="resume-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+
+                <h3>Download Resume</h3>
+                <p>Get a PDF copy of my resume for your records or to share with your team.</p>
+
+                <!-- Download Button -->
+                <button onclick="downloadResume()" class="btn btn-white">
+                    <i class="fas fa-file-pdf"></i>
+                    <span id="resume-text">Download PDF</span>
+                </button>
+            </div>
+        </section>
+    </div>
+    
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="page-header">
+            <h1 id="contact-heading">Get In Touch</h1>
+            <p>I'm always interested in new opportunities and collaborations. Let's connect and discuss how we can work together!</p>
+        </div>
+        <section class="section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 style="color: #1e293b; margin-bottom: 30px; font-size: 1.5rem;">Contact Information</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>smahsanhabib2019.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>01317 426848</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>19/4 Abdullahbagh, North Badda, Dhaka-1212</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3 style="color: #1e293b; margin-bottom: 30px; font-size: 1.5rem;">Let's Connect</h3>
+                    <p style="color: #64748b; margin-bottom: 30px; line-height: 1.6;">I'm always interested in new opportunities and collaborations. Feel free to reach out if you'd like to work together!</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ahsan-habib-388293333/" class="social-link" target="_blank" rel="noopener noreferrer"> 
+                            <i class="fab fa-linkedin"></i> 
+                        </a> 
+                        <a href="https://github.com/ahsan-habib7" class="social-link" target="_blank" rel="noopener noreferrer"> 
+                            <i class="fab fa-github"></i> 
+                        </a> 
+                        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer"> 
+                            <i class="fab fa-twitter"></i> 
+                        </a> 
+                        <a href="mailto:smahsanhabib2019@gmail.com" class="social-link" title="Email Me" rel="noopener noreferrer"> 
+                            <i class="fas fa-envelope"></i> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Ahsan Habib</h3>
+                    <p class="footer-description">Software Engineering Student passionate about creating innovative solutions and building amazing digital experiences.</p>
+                    <div class="footer-social">
+                        <a href="mailto:smahsanhabib2019@gmail.com" class="social-link" title="Email Me" rel="noopener noreferrer"> 
+                            <i class="fas fa-envelope"></i> 
+                        </a>
+                        <a href="https://www.linkedin.com/in/ahsan-habib-388293333/" class="footer-social-link" target="_blank" rel="noopener noreferrer" title="LinkedIn"> 
+                            <i class="fab fa-linkedin"></i> 
+                        </a> 
+                        <a href="https://github.com/ahsan-habib7" class="footer-social-link" target="_blank" rel="noopener noreferrer" title="GitHub"> 
+                            <i class="fab fa-github"></i> 
+                        </a> 
+                        <a href="#" class="footer-social-link" target="_blank" rel="noopener noreferrer" title="Twitter"> 
+                            <i class="fab fa-twitter"></i> 
+                        </a> 
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a onclick="showPage('home')">Home</a></li>
+                        <li><a onclick="showPage('about')">About</a></li>
+                        <li><a onclick="showPage('projects')">Projects</a></li>
+                        <li><a onclick="showPage('papers')">Papers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Contact Me</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:smahsanhabib2019@gmail.com">smahsanhabib2019@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+8801317426848">+880 1317 426848</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>19/4 Abdullahbagh, North Badda, Dhaka-1212</span></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-section-title">Let's Connect</h4>
+                    <p class="footer-cta-text">Interested in working together or have a project in mind?</p><a onclick="showPage('contact')" class="footer-cta-button"> <i class="fas fa-paper-plane"></i> Get In Touch </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Ahsan Habib. All rights reserved.</p>
+                <p>Built with passion and dedication to excellence.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Project Detail Modals -->
+    <div id="projectModal" class="project-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-modal" onclick="closeProjectModal()"> 
+                    <i class="fas fa-times"></i> 
+                </button>
+                <div class="modal-header-content">
+                    <div class="modal-icon" id="modalIcon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h1 class="modal-title" id="modalTitle">E-Commerce Platform</h1>
+                    <p class="modal-subtitle" id="modalSubtitle">Full-Stack Web Application</p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                    <p class="modal-description" id="modalDescription">A comprehensive full-stack e-commerce solution featuring modern UI design, secure payment processing, inventory management, and a powerful admin dashboard.</p>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-star"></i> Key Features</h3>
+                    <div class="feature-grid" id="modalFeatures">
+                        <div class="feature-item">
+                            <h4>Secure Payments</h4>
+                            <p>Integrated Stripe payment processing with SSL encryption</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Real-time Inventory</h4>
+                            <p>Live inventory tracking and automatic stock updates</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Admin Dashboard</h4>
+                            <p>Comprehensive analytics and management interface</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>Mobile Responsive</h4>
+                            <p>Optimized for all devices and screen sizes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3><i class="fas fa-code"></i> Technologies Used</h3>
+                    <div class="tech-showcase" id="modalTechShowcase">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i> 
+                            <span>React</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i> 
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i> 
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-stripe"></i> 
+                            <span>Stripe</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-aws"></i> 
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-shield-alt"></i> 
+                            <span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <a href="#" class="modal-btn primary" target="_blank" rel="noopener noreferrer"> 
+                        <i class="fas fa-external-link-alt"></i> 
+                        Live Demo 
+                    </a> 
+                    <a href="#" class="modal-btn secondary" target="_blank" rel="noopener noreferrer"> 
+                        <i class="fab fa-github"></i> 
+                        View Code 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="mobile-menu.js"></script>
+
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99ac2b4785e80645',t:'MTc2MjUxMTU3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
