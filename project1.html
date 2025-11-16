@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project — Habib</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#FF7B00;
+      --muted:#64748b;
+      --bg:#fff8ef;
+    }
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:#111; -webkit-font-smoothing:antialiased}
+    .heading-decorative{font-family:"Playfair Display",serif}
+    /* image container max width */
+    .project-hero { max-width: 1100px; margin: 0 auto; }
+    /* card like look for right column */
+    .tech-card{ background: #fff; border:1px solid rgba(0,0,0,0.04); border-radius:12px; padding:18px; box-shadow: 0 8px 30px rgba(16,24,40,0.04) }
+    /* feature list */
+    .feature-item { border-left:4px solid var(--accent); padding:14px; background:#fff; border-radius:10px; box-shadow:0 6px 20px rgba(0,0,0,0.04); }
+    /* suggested cards */
+    .suggest-card { background: #fff; border-radius:12px; overflow:hidden; border:1px solid rgba(0,0,0,0.04); box-shadow:0 8px 30px rgba(16,24,40,0.04); }
+    @media (min-width:1024px){
+      .big-title { font-size:3.2rem; }
+    }
+    /* Style for tech icon items */
+    .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        background: var(--bg);
+        border-radius: 6px;
+        font-size: 0.9rem;
+        color: #111;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+    .tech-item i {
+        color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <header class="py-6 px-6 lg:px-12">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html#recent-projects" class="inline-flex items-center gap-3 text-sm font-medium text-gray-700 hover:text-black">
+        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        Back to projects
+      </a>
+    </div>
+  </header>
+
+  <main class="pb-20">
+    <section class="project-hero px-6 lg:px-0 py-6">
+      <div class="rounded-xl overflow-hidden shadow-2xl border-4 border-white transform transition-transform hover:scale-[1.01] duration-500 ease-in-out">
+        <img id="project-image" src="rentMaster.png" alt="Project preview" class="w-full h-72 md:h-[420px] object-cover">
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 mt-10">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+        <div class="lg:col-span-2">
+          <h1 id="project-title" class="text-3xl md:text-4xl font-extrabold heading-decorative big-title">Project Title</h1>
+          <p id="project-summary" class="mt-4 text-gray-700 text-lg max-w-3xl">
+            Short summary of the project goes here. Explain the purpose and a one-line elevator pitch of the product.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a id="live-demo" href="#" target="_blank" class="inline-flex items-center gap-3 px-5 py-3 bg-black text-white rounded-full shadow hover:bg-gray-900 transition">
+              <i data-lucide="globe" class="w-4 h-4"></i> View Live Demo
+            </a>
+            <a id="github-link" href="#" target="_blank" class="inline-flex items-center gap-3 px-5 py-3 border border-gray-300 rounded-full hover:bg-gray-50 transition">
+              <i data-lucide="github" class="w-4 h-4"></i> View Code
+            </a>
+          </div>
+
+          <div class="mt-10 bg-transparent">
+            <h2 class="text-2xl font-semibold mb-3">Overview</h2>
+            <p id="project-description" class="text-gray-700 leading-relaxed">
+              Full detailed description of the project. Explain the problem, your approach, architecture highlights, trade-offs, and the final outcome.
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <h3 class="text-2xl font-semibold mb-6">Key Features</h3>
+            <div id="features-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="feature-item p-4">
+                <h4 class="font-semibold">Feature 1</h4>
+                <p class="mt-2 text-sm text-gray-600">Short explanation about the feature and why it's useful to users.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="tech-card">
+          <h4 class="text-lg font-semibold mb-3">Technologies Used</h4>
+          <div id="tech-list" class="space-y-2">
+            <div class="tech-item">
+                <i class="fas fa-code"></i>
+                <span>HTML5</span>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h5 class="text-sm font-semibold text-gray-700 mb-2">Project Details</h5>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li id="project-role"><strong>Role:</strong> Lead Developer</li>
+              <li id="project-duration"><strong>Duration:</strong> Jun 2024 – Aug 2024</li>
+              <li id="project-people"><strong>People:</strong> Solo / 2 collaborators</li>
+            </ul>
+          </div>
+
+          <div class="mt-6">
+            <h5 class="text-sm font-semibold text-gray-700 mb-2">Category</h5>
+            <div id="project-tags" class="flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">e-commerce</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 mt-16">
+      <h3 class="text-2xl font-semibold mb-6">More Projects You May Like</h3>
+      <div id="suggested-projects-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="project1.html?id=petshop" class="suggest-card block overflow-hidden">
+          <img src="petty.png" alt="Project 2" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Pet Shop Management System</h4>
+            <p class="mt-2 text-sm text-gray-600">A dynamic web-based application for managing pet inventory, customers, and sales operations.</p>
+            <div class="mt-3 text-xs text-gray-500">HTML • PHP • MySQL</div>
+          </div>
+        </a>
+
+        <a href="project1.html?id=dashboard" class="suggest-card block overflow-hidden">
+          <img src="placeholder.png" alt="Project 3" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Business Intelligence Dashboard</h4>
+            <p class="mt-2 text-sm text-gray-600">Comprehensive analytics dashboard with interactive data visualizations.</p>
+            <div class="mt-3 text-xs text-gray-500">D3.js • Python • Flask</div>
+          </div>
+        </a>
+
+        <a href="project1.html?id=socialmedia" class="suggest-card block overflow-hidden">
+          <img src="placeholder.png" alt="Project 1" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Social Media Mobile App</h4>
+            <p class="mt-2 text-sm text-gray-600">Cross-platform social media application with real-time messaging.</p>
+            <div class="mt-3 text-xs text-gray-500">React Native • Firebase • Redux</div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 text-center bg-transparent mt-16">
+    <p class="text-sm text-gray-600">&copy; 2025 Habib — <span class="text-gray-500">Designed with passion</span></p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Combined Project Data (using projectData from script.js as it has the full details)
+    const projectData = {
+        computershop: {
+            id: 'computershop',
+            image: 'loadintech.png',
+            status: 'Live',
+            title: "Load-In-Tech",
+            category: 'Web App',
+            linkGithub: "https://github.com/ahsan-habib7/Load-In-Tech", // Added mock links
+            linkDemo: "https://ahsan-habib7.github.io/Load-In-Tech/",     // Added mock links
+            description: "Load-In-Tech is a sleek and high-performance e-commerce platform showcasing premium computer hardware and gaming components. It features dynamic product filtering, interactive navigation, smooth animations, and a professional color palette for an immersive shopping experience. The design prioritizes usability and responsiveness for both desktop and mobile users.",
+            features: [
+                { title: 'Modern E-commerce UI', desc: 'Clean, responsive, and fully optimized store layout with smooth animations' },
+                { title: 'Dynamic Product Categories', desc: 'Filter products by categories with real-time updates' },
+                { title: 'Featured & Flash Sale Products', desc: 'Showcases trending items and time-limited deals with countdown' },
+                { title: 'Gaming Setup Bundles', desc: 'Pre-built gaming bundles with detailed price breakdowns' },
+                { title: 'Interactive Navigation', desc: 'Sticky navbar, smooth scrolling, and animated menu interactions' },
+                { title: 'Cart, Wishlist & Compare', desc: 'Individual counters with notifications and action feedback' },
+                { title: 'Search System', desc: 'Quick product search that updates results instantly' },
+                { title: 'Chatbot Widget', desc: 'Floating chat assistant with message suggestions and UI animations' },
+                { title: 'Notification System', desc: 'Dynamic toast notifications for cart and wishlist actions' },
+                { title: 'Brand Showcase', desc: 'Display of premium tech brands with clean minimal UI' },
+                { title: 'Blog & Tech News', desc: 'Latest tech articles, guides, and reviews section' },
+                { title: 'Professional Services', desc: 'Assembly, tuning, warranty, and home setup services' },
+                { title: 'Customer Testimonials', desc: 'Real feedback from users with modern card-style UI' },
+                { title: 'Newsletter Subscription', desc: 'Email subscription with validation and user feedback' }
+            ],
+            technologies: [
+                { icon: 'fab fa-html5', name: 'HTML5' },
+                { icon: 'fab fa-css3-alt', name: 'Tailwind CSS' },
+                { icon: 'fab fa-js', name: 'JavaScript' },
+                { icon: 'fas fa-code', name: 'Custom CSS' },
+                { icon: 'fas fa-cogs', name: 'Custom JavaScript' }
+            ]
+        },
+        petshop: {
+            id: 'petshop',
+            image: 'petty.png',
+            status: 'Live',
+            title: 'Pet Shop Management System',
+            category: 'Web App',
+            linkGithub: "https://github.com/ahsan-habib7/Pet-Shop-Management#", // Mock links
+            linkDemo: "#",
+            description: "The Pet Shop Management System is a full-featured web application designed to simplify pet store operations. It includes modules for managing pets, customers, and sales transactions with a clean and responsive interface. The system uses PHP for backend logic and phpMyAdmin (MySQL) for data storage and management. Its goal is to make it easy for shop owners to track pets, handle purchases, and monitor business performance digitally.",
+            features: [
+                { title: 'Inventory management', desc: 'Add, view, update, and delete pet and product inventory.' },
+                { title: 'Sales Tracking', desc: 'Record daily transactions and generate sales reports.' },
+                { title: 'Customer Records', desc: 'Securely store and manage customer contact and purchase history.' },
+                { title: 'Admin Access', desc: 'Protected area for administrative tasks and reporting.' },
+                { title: 'Simple UI', desc: 'Clean, responsive interface focused on quick data entry.' }
+            ],
+            technologies: [
+                { icon: 'fab fa-html5', name: 'HTML5' },
+                { icon: 'fab fa-css3-alt', name: 'CSS3' },
+                { icon: 'fab fa-js', name: 'JavaScript' },
+                { icon: 'fas fa-server', name: 'PHP' },
+                { icon: 'fas fa-database', name: 'MySQL' }
+            ]
+        },
+        // Adding RentMaster details to match the original HTML's suggested projects logic
+        rentmaster: {
+            id: 'rentmaster',
+            image: 'rentMaster.png',
+            status: 'Development',
+            title: 'RentMaster Car Rental System',
+            category: 'Full-Stack',
+            linkGithub: "https://github.com/ahsan-habib7/rentMaster",
+            linkDemo: "#",
+            description: "RentMaster combines a NestJS API with a Next.js frontend to provide a performant car rental experience: bookings, payments, vehicle management, and admin analytics. It features a modern, responsive design.",
+            features: [
+                { title: "Secure JWT authentication", desc: "User and admin login protected by JSON Web Tokens." },
+                { title: "Booking calendar & availability", desc: "Real-time calendar view of car availability for booking." },
+                { title: "Admin dashboard", desc: "Comprehensive dashboard for vehicle, user, and booking management." },
+                { title: "Payment integration (mock/demo)", desc: "Simulated payment processing for a complete checkout flow." }
+            ],
+            technologies: [
+                { icon: 'fab fa-node-js', name: 'NestJS' },
+                { icon: 'fab fa-react', name: 'NextJS' },
+                { icon: 'fas fa-database', name: 'PostgreSQL' },
+                { icon: 'fas fa-code', name: 'TypeORM' },
+                { icon: 'fab fa-css3-alt', name: 'Tailwind' }
+            ]
+        },
+
+        volunteer: {
+            id: 'volunteer',
+            icon: 'fas fa-hands-helping',
+            status: 'Development',
+            title: 'Volunteer Management System',
+            category: 'Backend',
+            linkGithub: "https://github.com/ahsan-habib7/Volunteer-Management-Backend-ASP.NET-",
+            linkDemo: "#",
+            description: "Volunteer Management System is a backend application built with ASP.NET Core and Entity Framework Core to streamline volunteer coordination. It offers features for managing volunteer profiles, event scheduling, and tracking hours contributed. The system is designed to be robust, secure, and scalable, providing a solid foundation for organizations to efficiently manage their volunteer workforce.",
+            features: [
+                { title: "Volunteer Profiles", desc: "Create and manage detailed volunteer profiles with contact information and skills." },
+                { title: "Event Scheduling", desc: "Organize and schedule volunteer events with date, time, and location details." },
+                { title: "Hours Tracking", desc: "Log and track volunteer hours for reporting and recognition." },
+                { title: "Role-Based Access Control", desc: "Secure access to different functionalities based on user roles." }],
+            technologies: [
+                { icon: 'fas fa-cogs', name: 'ASP.NET Core' },
+                { icon: 'fas fa-database', name: 'Entity Framework Core' },
+                { icon: 'fas fa-server', name: 'C#' },
+                { icon: 'fas fa-lock', name: 'JWT Authentication' }
+            ]
+        }
+    };
+
+
+    // util: read query param id
+    function getQueryParam(name){
+      const params = new URLSearchParams(window.location.search);
+      // The old HTML used id=1, id=2, id=3. The script.js uses id=computershop, id=petshop, id=dashboard etc.
+      // We will look for the text ID: computershop, petshop, etc.
+      return params.get(name);
+    }
+
+    // populate page from project id
+    (function populate(){
+      // Fallback ID to the first item in the projectData object keys
+      const defaultProjectId = Object.keys(projectData)[0];
+      const idParam = getQueryParam('id') || defaultProjectId;
+      const project = projectData[idParam];
+
+      // If project is not found, stop execution
+      if (!project) {
+        console.error("Project data not found for ID:", idParam);
+        return;
+      }
+
+      // 1. Set Document Title
+      document.title = project.title + " — Habib";
+
+      // 2. Set Image
+      const img = document.getElementById('project-image');
+      const isImageFile = project.image && (project.image.endsWith('.jpg') || project.image.endsWith('.png'));
+      if(isImageFile) {
+        img.src = project.image;
+        img.alt = project.title + " preview image";
+      } else {
+        // Fallback or placeholder for icon-only projects
+        img.src = "https://via.placeholder.com/1100x420?text=Project+Visualization+" + project.title.replace(/\s/g, '+');
+        img.alt = "Placeholder image for " + project.title;
+      }
+
+      // 3. Set Text Content
+      document.getElementById('project-title').textContent = project.title;
+      // Use the first sentence of the description as a short summary/elevator pitch
+      document.getElementById('project-summary').textContent = project.description.split('. ')[0] + '.';
+      document.getElementById('project-description').textContent = project.description;
+
+      // 4. Set Links
+      const github = document.getElementById('github-link');
+      const demo = document.getElementById('live-demo');
+      
+      if(project.linkGithub && project.linkGithub !== '#') { 
+        github.href = project.linkGithub; 
+        github.classList.remove('opacity-50', 'pointer-events-none'); 
+      } else { 
+        github.href='#'; 
+        github.classList.add('opacity-50', 'pointer-events-none'); 
+      }
+      
+      if(project.linkDemo && project.linkDemo !== '#') { 
+        demo.href = project.linkDemo; 
+        demo.classList.remove('opacity-50', 'pointer-events-none'); 
+      } else { 
+        demo.href='#'; 
+        demo.classList.add('opacity-50', 'pointer-events-none'); 
+      }
+
+
+      // 5. Populate Features dynamically
+      const featuresGrid = document.getElementById('features-grid');
+      featuresGrid.innerHTML = '';
+      (project.features || []).forEach(f => {
+        const el = document.createElement('div');
+        el.className = 'feature-item p-4';
+        el.innerHTML = `<h4 class="font-semibold">${f.title}</h4><p class="mt-2 text-sm text-gray-600">${f.desc}</p>`;
+        featuresGrid.appendChild(el);
+      });
+
+      // 6. Populate Technologies
+      const techList = document.getElementById('tech-list');
+      techList.innerHTML = '';
+      (project.technologies || []).forEach(tech => {
+        const el = document.createElement('div');
+        el.className = 'tech-item';
+        el.innerHTML = `<i class="${tech.icon}"></i><span>${tech.name}</span>`;
+        techList.appendChild(el);
+      });
+
+      // 7. Populate Tags/Category
+      const tagsContainer = document.getElementById('project-tags');
+      tagsContainer.innerHTML = `<span class="text-xs px-3 py-1 bg-gray-100 rounded-full">${project.category}</span>`;
+      
+      // 8. Update suggested projects (Optional, but good practice to link to actual IDs)
+      // Note: The structure of suggested projects is manually hardcoded above for brevity, 
+      // but in a real scenario, this would also be dynamic.
+      document.getElementById('suggested-projects-grid').innerHTML = `
+        <a href="project1.html?id=petshop" class="suggest-card block overflow-hidden">
+          <img src="petty.png" alt="Project 2" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Pet Shop Management System</h4>
+            <p class="mt-2 text-sm text-gray-600">${projectData.petshop.description.split('. ')[0]}.</p>
+            <div class="mt-3 text-xs text-gray-500">HTML • PHP • MySQL</div>
+          </div>
+        </a>
+
+        <a href="project1.html?id=rentmaster" class="suggest-card block overflow-hidden">
+          <img src="rentMaster.png" alt="Project 3" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">RentMaster Car Rental System</h4>
+            <p class="mt-2 text-sm text-gray-600">${projectData.rentmaster.description.split('. ')[0]}.</p>
+            <div class="mt-3 text-xs text-gray-500">NestJS • NextJS • Postgres</div>
+          </div>
+        </a>
+
+        <a href="project1.html?id=computershop" class="suggest-card block overflow-hidden">
+          <img src="loadintech.png" alt="Project 1" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">Load-In-Tech</h4>
+            <p class="mt-2 text-sm text-gray-600">${projectData.computershop.description.split('. ')[0]}.</p>
+            <div class="mt-3 text-xs text-gray-500">HTML • JS • Tailwind</div>
+          </div>
+        </a>
+      `;
+    })();
+  </script>
+</body>
+</html>
