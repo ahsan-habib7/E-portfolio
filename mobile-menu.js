@@ -28,18 +28,32 @@
         }
 
         // Placeholder function for navigation
-        function showTogglePage(page) {
-            console.log('Navigating to:', page);
-            // Close mobile menu after selection
-            const menu = document.getElementById('mobile-menu');
-            const button = document.getElementById('mobile-menu-button');
-            const icon = button.querySelector('i');
-            
-            menu.classList.add('hidden');
-            menu.classList.remove('show');
-            icon.className = 'fas fa-bars text-lg';
-            button.style.transform = 'rotate(0deg)';
-        }
+        // Placeholder function for navigation
+function showTogglePage(page) {
+    
+    // 1. **THE FIX: Call the main navigation function from script.js**
+    if (typeof showPage === 'function') {
+        showPage(page); 
+    } else {
+        console.error('showPage function not found. Is script.js loaded?');
+    }
+
+    console.log('Navigating to:', page);
+
+    // 2. Close mobile menu after selection (existing logic)
+    const menu = document.getElementById('mobile-menu');
+    const button = document.getElementById('mobile-menu-button');
+    const icon = button.querySelector('i');
+    
+    menu.classList.add('hidden');
+    menu.classList.remove('show');
+
+    // Reset button icon
+    if (icon) {
+        icon.className = 'fas fa-bars text-lg';
+        button.style.transform = 'rotate(0deg)';
+    }
+}
 
         // Close menu when clicking outside
         document.addEventListener('click', (event) => {
