@@ -606,7 +606,7 @@
         }
         // Simple direct download function
 function downloadResume() {
-    const pdfPath = "resume/Ahsan_Habib_Resume.pdf"; // <-- your PDF location
+    const pdfPath = "resume/Ahsan_Habib.pdf"; // <-- your PDF location
     const link = document.createElement('a');
     link.href = pdfPath;
     link.download = "Ahsan_Habib_Resume.pdf";
@@ -734,4 +734,5 @@ html, body {
             initializePageAnimations();
             initializeCarousel();
             initializeProjectsPage();
+
         });
